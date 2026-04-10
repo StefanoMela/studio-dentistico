@@ -65,32 +65,32 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-cream overflow-hidden">
+      <section className="relative bg-surface-alt overflow-hidden">
         {/* Decorative background */}
         <div
           aria-hidden="true"
           className="absolute inset-0 overflow-hidden pointer-events-none"
         >
-          <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-sage-light opacity-40 blur-3xl" />
-          <div className="absolute bottom-0 -left-20 w-72 h-72 rounded-full bg-gold-light opacity-30 blur-3xl" />
+          <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary/20 blur-3xl" />
+          <div className="absolute bottom-0 -left-20 w-72 h-72 rounded-full bg-accent/20 blur-3xl" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-5 md:px-8 py-20 md:py-32">
           <div className="max-w-2xl animate-fade-up">
-            <p className="text-xs font-semibold tracking-[0.3em] text-sage uppercase mb-5">
+            <p className="text-xs font-semibold tracking-[0.3em] text-muted uppercase mb-5">
               Studio Dentistico Sparano · Milano
             </p>
             <h1
-              className="text-4xl sm:text-5xl md:text-6xl font-semibold text-charcoal leading-[1.12] mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl font-semibold text-dark leading-[1.12] mb-6"
               style={{ fontFamily: "Playfair Display, Georgia, serif" }}
             >
               Il sorriso
               <br />
               che hai sempre
               <br />
-              <em className="text-sage-dark not-italic">desiderato.</em>
+              <em className="text-primary not-italic">desiderato.</em>
             </h1>
-            <p className="text-warm-gray text-base md:text-lg leading-relaxed mb-10 max-w-xl">
+            <p className="text-gray text-base md:text-lg leading-relaxed mb-10 max-w-xl">
               Ci prendiamo cura della tua salute orale con professionalità,
               tecnologie avanzate e un approccio umano e personalizzato. Siamo
               qui per te, ogni giorno.
@@ -117,7 +117,7 @@ export default function HomePage() {
           >
             <path
               d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"
-              fill="var(--color-ivory)"
+              fill="var(--color-surface)"
             />
           </svg>
         </div>
@@ -140,12 +140,12 @@ export default function HomePage() {
                 <span aria-hidden="true">{item.icon}</span>
               </IconWrapper>
               <h3
-                className="text-base font-semibold text-charcoal mb-2"
+                className="text-base font-semibold text-dark mb-2"
                 style={{ fontFamily: "Playfair Display, Georgia, serif" }}
               >
                 {item.title}
               </h3>
-              <p className="text-sm text-warm-gray leading-relaxed">
+              <p className="text-sm text-gray leading-relaxed">
                 {item.desc}
               </p>
             </Card>
@@ -165,18 +165,18 @@ export default function HomePage() {
             <Link
               key={t.title}
               href={t.href}
-              className="group bg-white rounded-2xl p-7 border border-cream shadow-sm hover:shadow-md hover:border-sage-light transition-all duration-300"
+              className="group bg-white rounded-2xl p-7 border border-border shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300"
             >
               <h3
-                className="text-lg font-semibold text-charcoal mb-3 group-hover:text-sage-dark transition-colors"
+                className="text-lg font-semibold text-dark mb-3 group-hover:text-primary transition-colors"
                 style={{ fontFamily: "Playfair Display, Georgia, serif" }}
               >
                 {t.title}
               </h3>
-              <p className="text-sm text-warm-gray leading-relaxed mb-5">
+              <p className="text-sm text-gray leading-relaxed mb-5">
                 {t.desc}
               </p>
-              <span className="text-xs font-semibold tracking-wide text-sage-dark group-hover:gap-2 flex items-center gap-1">
+              <span className="text-xs font-semibold tracking-wide text-primary group-hover:gap-2 flex items-center gap-1">
                 Scopri di più
                 <span
                   aria-hidden="true"
@@ -198,7 +198,7 @@ export default function HomePage() {
       {/* CTA */}
       <Section bg="charcoal">
         <div className="text-center max-w-xl mx-auto">
-          <p className="text-xs font-semibold tracking-[0.25em] text-sage-light uppercase mb-4">
+          <p className="text-xs font-semibold tracking-[0.25em] text-secondary uppercase mb-4">
             Inizia oggi
           </p>
           <h2
@@ -215,7 +215,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button
               href="/contatti"
-              className="bg-white text-charcoal hover:bg-cream"
+              className="bg-white text-dark hover:bg-surface-alt"
             >
               Contattaci
             </Button>

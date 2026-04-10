@@ -168,18 +168,18 @@ export default function TrattamentiPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-cream py-16 md:py-24">
+      <section className="bg-surface-alt py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-5 md:px-8">
-          <p className="text-xs font-semibold tracking-[0.3em] text-sage uppercase mb-4">
+          <p className="text-xs font-semibold tracking-[0.3em] text-muted uppercase mb-4">
             I nostri servizi
           </p>
           <h1
-            className="text-4xl md:text-5xl font-semibold text-charcoal leading-tight mb-5 max-w-2xl"
+            className="text-4xl md:text-5xl font-semibold text-dark leading-tight mb-5 max-w-2xl"
             style={{ fontFamily: "Playfair Display, Georgia, serif" }}
           >
             Trattamenti completi per ogni esigenza
           </h1>
-          <p className="text-warm-gray max-w-xl leading-relaxed">
+          <p className="text-gray max-w-xl leading-relaxed">
             Dall'estetica alla prevenzione, dalla chirurgia all'ortodonzia: ogni
             paziente trova nel nostro studio una risposta professionale alle
             proprie necessità.
@@ -200,12 +200,12 @@ export default function TrattamentiPage() {
             </IconWrapper>
             <div>
               <h2
-                className="text-2xl md:text-3xl font-semibold text-charcoal mb-3"
+                className="text-2xl md:text-3xl font-semibold text-dark mb-3"
                 style={{ fontFamily: "Playfair Display, Georgia, serif" }}
               >
                 {cat.title}
               </h2>
-              <p className="text-warm-gray max-w-2xl leading-relaxed">
+              <p className="text-gray max-w-2xl leading-relaxed">
                 {cat.intro}
               </p>
             </div>
@@ -215,12 +215,12 @@ export default function TrattamentiPage() {
             {cat.treatments.map((t) => (
               <div
                 key={t.name}
-                className="bg-white rounded-xl p-5 border border-cream shadow-sm"
+                className="bg-white rounded-xl p-5 border border-border shadow-sm"
               >
-                <h3 className="text-sm font-semibold text-charcoal mb-2">
+                <h3 className="text-sm font-semibold text-dark mb-2">
                   {t.name}
                 </h3>
-                <p className="text-xs text-warm-gray leading-relaxed">
+                <p className="text-xs text-gray leading-relaxed">
                   {t.desc}
                 </p>
               </div>
@@ -244,7 +244,7 @@ export default function TrattamentiPage() {
           </p>
           <Button
             href="/contatti"
-            className="bg-white text-charcoal hover:bg-cream"
+            className="bg-white text-dark hover:bg-surface-alt"
           >
             Contattaci
           </Button>

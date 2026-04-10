@@ -12,16 +12,16 @@ export default function CookiePolicyPage() {
   return (
     <Section bg="ivory">
       <div className="max-w-2xl mx-auto">
-        <p className="text-xs font-semibold tracking-[0.25em] text-sage uppercase mb-3">
+        <p className="text-xs font-semibold tracking-[0.25em] text-muted uppercase mb-3">
           Informativa legale
         </p>
         <h1
-          className="text-3xl md:text-4xl font-semibold text-charcoal mb-3 leading-tight"
+          className="text-3xl md:text-4xl font-semibold text-dark mb-3 leading-tight"
           style={{ fontFamily: "Playfair Display, Georgia, serif" }}
         >
           Cookie Policy
         </h1>
-        <p className="text-sm text-warm-gray mb-10">
+        <p className="text-sm text-gray mb-10">
           Ultimo aggiornamento: {lastUpdate}
         </p>
 
@@ -52,7 +52,7 @@ export default function CookiePolicyPage() {
             Email:{" "}
             <a
               href="mailto:info@studiosparano.it"
-              className="text-sage-dark underline underline-offset-2"
+              className="text-primary underline underline-offset-2"
             >
               info@studiosparano.it
             </a>
@@ -132,7 +132,7 @@ export default function CookiePolicyPage() {
             Per esercitare tali diritti puoi contattarci all'indirizzo email{" "}
             <a
               href="mailto:info@studiosparano.it"
-              className="text-sage-dark underline underline-offset-2"
+              className="text-primary underline underline-offset-2"
             >
               info@studiosparano.it
             </a>
@@ -142,7 +142,7 @@ export default function CookiePolicyPage() {
               href="https://www.garanteprivacy.it"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sage-dark underline underline-offset-2"
+              className="text-primary underline underline-offset-2"
             >
               www.garanteprivacy.it
             </a>

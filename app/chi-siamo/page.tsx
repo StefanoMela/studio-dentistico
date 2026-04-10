@@ -67,19 +67,19 @@ export default function ChiSiamoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-cream py-16 md:py-24">
+      <section className="bg-surface-alt py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-5 md:px-8">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold tracking-[0.3em] text-sage uppercase mb-4">
+            <p className="text-xs font-semibold tracking-[0.3em] text-muted uppercase mb-4">
               Il nostro team
             </p>
             <h1
-              className="text-4xl md:text-5xl font-semibold text-charcoal leading-tight mb-5"
+              className="text-4xl md:text-5xl font-semibold text-dark leading-tight mb-5"
               style={{ fontFamily: "Playfair Display, Georgia, serif" }}
             >
               Professionisti al servizio del tuo sorriso
             </h1>
-            <p className="text-warm-gray leading-relaxed">
+            <p className="text-gray leading-relaxed">
               Lo Studio Dentistico Sparano è nato nel 2003 con una visione
               chiara: offrire cure odontoiatriche di eccellenza in un ambiente
               umano e accogliente. Oggi siamo un team di quattro specialisti che
@@ -97,19 +97,19 @@ export default function ChiSiamoPage() {
               eyebrow="La nostra storia"
               title="Vent'anni di passione per la cura orale"
             />
-            <p className="text-warm-gray leading-relaxed mb-5">
+            <p className="text-gray leading-relaxed mb-5">
               Lo studio nasce dalla visione del Dott. Marco Sparano, che dopo
               anni di formazione in Italia e all'estero decide di fondare uno
               studio in cui la qualità clinica si unisse all'attenzione genuina
               verso il paziente.
             </p>
-            <p className="text-warm-gray leading-relaxed mb-5">
+            <p className="text-gray leading-relaxed mb-5">
               Negli anni abbiamo investito in tecnologie all'avanguardia —
               scanner intraorale 3D, radiologia digitale a bassa emissione,
               laser dentale — senza mai perdere di vista ciò che conta davvero:
               la relazione con le persone che ci affidano il loro sorriso.
             </p>
-            <p className="text-warm-gray leading-relaxed">
+            <p className="text-gray leading-relaxed">
               Oggi lo studio è cresciuto in dimensioni e competenze, ma la
               nostra filosofia rimane invariata: ogni paziente è unico e merita
               un piano di trattamento cucito su misura.
@@ -126,12 +126,12 @@ export default function ChiSiamoPage() {
             ].map((s) => (
               <Card key={s.label} className="text-center">
                 <p
-                  className="text-3xl md:text-4xl font-semibold text-sage-dark mb-2"
+                  className="text-3xl md:text-4xl font-semibold text-primary mb-2"
                   style={{ fontFamily: "Playfair Display, Georgia, serif" }}
                 >
                   {s.value}
                 </p>
-                <p className="text-xs text-warm-gray leading-snug">{s.label}</p>
+                <p className="text-xs text-gray leading-snug">{s.label}</p>
               </Card>
             ))}
           </div>
@@ -150,7 +150,7 @@ export default function ChiSiamoPage() {
             <Card key={member.name} className="flex gap-5">
               {/* Avatar */}
               <div
-                className="w-14 h-14 rounded-xl bg-sage-light text-sage-dark flex items-center justify-center font-semibold text-base shrink-0"
+                className="w-14 h-14 rounded-xl bg-surface-alt text-primary flex items-center justify-center font-semibold text-base shrink-0"
                 style={{ fontFamily: "Playfair Display, Georgia, serif" }}
                 aria-hidden="true"
               >
@@ -158,16 +158,16 @@ export default function ChiSiamoPage() {
               </div>
               <div>
                 <h2
-                  className="text-base font-semibold text-charcoal mb-0.5"
+                  className="text-base font-semibold text-dark mb-0.5"
                   style={{ fontFamily: "Playfair Display, Georgia, serif" }}
                 >
                   {member.name}
                 </h2>
-                <p className="text-xs font-medium text-sage-dark mb-1">
+                <p className="text-xs font-medium text-primary mb-1">
                   {member.role}
                 </p>
-                <p className="text-xs text-sage italic mb-3">{member.spec}</p>
-                <p className="text-xs text-warm-gray leading-relaxed">
+                <p className="text-xs text-muted italic mb-3">{member.spec}</p>
+                <p className="text-xs text-gray leading-relaxed">
                   {member.bio}
                 </p>
               </div>
@@ -191,12 +191,12 @@ export default function ChiSiamoPage() {
                 aria-hidden="true"
               />
               <h3
-                className="text-base font-semibold text-charcoal mb-3"
+                className="text-base font-semibold text-dark mb-3"
                 style={{ fontFamily: "Playfair Display, Georgia, serif" }}
               >
                 {v.title}
               </h3>
-              <p className="text-sm text-warm-gray leading-relaxed">{v.desc}</p>
+              <p className="text-sm text-gray leading-relaxed">{v.desc}</p>
             </div>
           ))}
         </div>
@@ -207,12 +207,12 @@ export default function ChiSiamoPage() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-3xl mx-auto text-center md:text-left">
           <div>
             <h2
-              className="text-2xl font-semibold text-charcoal mb-2"
+              className="text-2xl font-semibold text-dark mb-2"
               style={{ fontFamily: "Playfair Display, Georgia, serif" }}
             >
               Vieni a conoscerci
             </h2>
-            <p className="text-warm-gray text-sm">
+            <p className="text-gray text-sm">
               La prima visita è il modo migliore per iniziare un percorso
               insieme.
             </p>

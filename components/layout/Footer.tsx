@@ -12,7 +12,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-charcoal text-white">
+    <footer className="bg-dark text-white">
       <div className="max-w-6xl mx-auto px-5 md:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
           {/* Brand */}
@@ -23,7 +23,7 @@ export default function Footer() {
             >
               Studio Dentistico Sparano
             </p>
-            <p className="text-xs tracking-[0.2em] text-sage-light uppercase mb-4">
+            <p className="text-xs tracking-[0.2em] text-white/60 uppercase mb-4">
               Specialisti del sorriso
             </p>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h2 className="text-xs font-semibold tracking-[0.2em] text-sage-light uppercase mb-4">
+            <h2 className="text-xs font-semibold tracking-[0.2em] text-white/60 uppercase mb-4">
               Navigazione
             </h2>
             <nav aria-label="Navigazione footer">
@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h2 className="text-xs font-semibold tracking-[0.2em] text-sage-light uppercase mb-4">
+            <h2 className="text-xs font-semibold tracking-[0.2em] text-white/60 uppercase mb-4">
               Dove siamo
             </h2>
             <address className="not-italic space-y-2.5">

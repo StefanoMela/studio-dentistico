@@ -39,7 +39,7 @@ export default function CookieBanner() {
       aria-label="Informativa sui cookie"
       className="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:bottom-6 md:max-w-sm z-50 animate-fade-up"
     >
-      <div className="bg-charcoal text-white rounded-2xl shadow-2xl p-5 border border-white/10">
+      <div className="bg-dark text-white rounded-2xl shadow-2xl p-5 border border-white/10">
         {/* Icon */}
         <div className="flex items-start gap-3 mb-3">
           <span className="text-xl mt-0.5" aria-hidden="true">🍪</span>
@@ -50,7 +50,7 @@ export default function CookieBanner() {
               Non raccogliamo dati di profilazione senza il tuo consenso.{" "}
               <Link
                 href="/cookie-policy"
-                className="underline underline-offset-2 text-sage-light hover:text-white transition-colors"
+                className="underline underline-offset-2 text-white/80 hover:text-white transition-colors"
                 onClick={() => setVisible(false)}
               >
                 Maggiori informazioni
@@ -68,7 +68,7 @@ export default function CookieBanner() {
           </button>
           <button
             onClick={() => handleChoice(true)}
-            className="flex-1 text-xs font-medium px-3 py-2 rounded-lg bg-sage hover:bg-sage-dark text-white transition-colors"
+            className="flex-1 text-xs font-medium px-3 py-2 rounded-lg bg-accent hover:bg-primary text-white transition-colors"
           >
             Accetta
           </button>

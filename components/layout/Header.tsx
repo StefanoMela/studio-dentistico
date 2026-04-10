@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-ivory/95 backdrop-blur-md shadow-sm" : "bg-ivory"
+        scrolled ? "bg-surface/95 backdrop-blur-md shadow-sm" : "bg-surface"
       }`}
     >
       <div className="max-w-6xl mx-auto px-5 md:px-8">
@@ -42,12 +42,12 @@ export default function Header() {
             aria-label="Studio Dentistico Sparano - vai alla home"
           >
             <span
-              className="text-lg md:text-xl font-semibold text-charcoal tracking-tight group-hover:text-sage-dark transition-colors"
+              className="text-lg md:text-xl font-semibold text-dark tracking-tight group-hover:text-primary transition-colors"
               style={{ fontFamily: "Playfair Display, Georgia, serif" }}
             >
               Studio Dentistico
             </span>
-            <span className="text-xs md:text-sm font-medium tracking-[0.15em] text-sage uppercase">
+            <span className="text-xs md:text-sm font-medium tracking-[0.15em] text-muted uppercase">
               Sparano
             </span>
           </Link>
@@ -65,8 +65,8 @@ export default function Header() {
                   href={link.href}
                   className={`relative text-sm font-medium tracking-wide transition-colors pb-0.5 ${
                     isActive
-                      ? "text-sage-dark"
-                      : "text-warm-gray hover:text-charcoal"
+                      ? "text-primary"
+                      : "text-gray hover:text-dark"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -79,7 +79,7 @@ export default function Header() {
             })}
             <Link
               href="/contatti"
-              className="ml-2 px-5 py-2 bg-sage-dark text-white text-sm font-medium rounded-full hover:bg-charcoal transition-colors"
+              className="ml-2 px-5 py-2 bg-accent text-white text-sm font-medium rounded-full hover:bg-dark transition-colors"
             >
               Prenota
             </Link>
@@ -91,7 +91,7 @@ export default function Header() {
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Chiudi menu" : "Apri menu"}
-            className="md:hidden p-2 text-charcoal rounded-md"
+            className="md:hidden p-2 text-dark rounded-md"
           >
             <span
               className="block w-5 h-0.5 bg-current mb-1.5 transition-transform"
@@ -119,7 +119,7 @@ export default function Header() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden animate-slide-down border-t border-cream bg-ivory"
+          className="md:hidden animate-slide-down border-t border-border bg-surface"
         >
           <nav
             aria-label="Navigazione mobile"
@@ -133,8 +133,8 @@ export default function Header() {
                   href={link.href}
                   className={`px-3 py-3 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? "bg-sage-light text-sage-dark"
-                      : "text-warm-gray hover:bg-cream"
+                      ? "bg-surface-alt text-primary"
+                      : "text-gray hover:bg-surface-alt"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -144,7 +144,7 @@ export default function Header() {
             })}
             <Link
               href="/contatti"
-              className="mt-2 px-3 py-3 bg-sage-dark text-white text-sm font-medium rounded-lg text-center"
+              className="mt-2 px-3 py-3 bg-accent text-white text-sm font-medium rounded-lg text-center"
             >
               Prenota un appuntamento
             </Link>

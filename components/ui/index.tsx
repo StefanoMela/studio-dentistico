@@ -15,10 +15,10 @@ interface ButtonProps {
 }
 
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: "bg-sage-dark text-white hover:bg-charcoal shadow-sm",
+  primary: "bg-accent text-white hover:bg-dark shadow-sm",
   secondary:
-    "bg-transparent text-sage-dark border border-sage-dark hover:bg-sage-dark hover:text-white",
-  ghost: "bg-transparent text-warm-gray hover:text-charcoal",
+    "bg-transparent text-primary border border-sage-dark hover:bg-primary hover:text-white",
+  ghost: "bg-transparent text-gray hover:text-dark",
 };
 
 export function Button({
@@ -63,11 +63,11 @@ interface SectionProps {
 }
 
 const bgClasses: Record<string, string> = {
-  ivory: "bg-ivory",
-  cream: "bg-cream",
+  ivory: "bg-surface",
+  cream: "bg-surface-alt",
   white: "bg-white",
-  sage: "bg-sage-light",
-  charcoal: "bg-charcoal text-white",
+  sage: "bg-surface-alt",
+  charcoal: "bg-dark text-white",
 };
 
 export function Section({
@@ -102,17 +102,17 @@ export function SectionHeader({
   return (
     <div className={`mb-12 md:mb-16 max-w-2xl ${align}`}>
       {eyebrow && (
-        <p className="text-xs font-semibold tracking-[0.25em] text-sage uppercase mb-3">
+        <p className="text-xs font-semibold tracking-[0.25em] text-muted uppercase mb-3">
           {eyebrow}
         </p>
       )}
       <h2
-        className="text-3xl md:text-4xl font-semibold text-charcoal leading-tight mb-4"
+        className="text-3xl md:text-4xl font-semibold text-dark leading-tight mb-4"
         style={{ fontFamily: "Playfair Display, Georgia, serif" }}
       >
         {title}
       </h2>
-      {subtitle && <p className="text-warm-gray leading-relaxed">{subtitle}</p>}
+      {subtitle && <p className="text-gray leading-relaxed">{subtitle}</p>}
     </div>
   );
 }
@@ -126,7 +126,7 @@ interface CardProps {
 export function Card({ children, className = "" }: CardProps) {
   return (
     <div
-      className={`bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-cream ${className}`}
+      className={`bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-border ${className}`}
     >
       {children}
     </div>
@@ -143,7 +143,7 @@ export function IconWrapper({ children, size = "md" }: IconWrapperProps) {
   const s = size === "sm" ? "w-10 h-10 text-xl" : "w-14 h-14 text-2xl";
   return (
     <div
-      className={`${s} rounded-xl bg-sage-light text-sage-dark flex items-center justify-center mb-4`}
+      className={`${s} rounded-xl bg-surface-alt text-primary flex items-center justify-center mb-4`}
     >
       {children}
     </div>

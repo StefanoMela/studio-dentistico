@@ -30,18 +30,18 @@ export default function ContattiPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-cream py-16 md:py-24">
+      <section className="bg-surface-alt py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-5 md:px-8">
-          <p className="text-xs font-semibold tracking-[0.3em] text-sage uppercase mb-4">
+          <p className="text-xs font-semibold tracking-[0.3em] text-muted uppercase mb-4">
             Vieni a trovarci
           </p>
           <h1
-            className="text-4xl md:text-5xl font-semibold text-charcoal leading-tight mb-4 max-w-xl"
+            className="text-4xl md:text-5xl font-semibold text-dark leading-tight mb-4 max-w-xl"
             style={{ fontFamily: "Playfair Display, Georgia, serif" }}
           >
             Dove siamo e come raggiungerci
           </h1>
-          <p className="text-warm-gray max-w-lg leading-relaxed">
+          <p className="text-gray max-w-lg leading-relaxed">
             Il nostro studio si trova nel cuore di Milano. Siamo facilmente
             raggiungibili con i mezzi pubblici e disponiamo di parcheggio nelle
             immediate vicinanze.
@@ -55,18 +55,18 @@ export default function ContattiPage() {
           {/* Address */}
           <Card>
             <div
-              className="w-12 h-12 rounded-xl bg-sage-light text-sage-dark flex items-center justify-center text-xl mb-4"
+              className="w-12 h-12 rounded-xl bg-surface-alt text-primary flex items-center justify-center text-xl mb-4"
               aria-hidden="true"
             >
               ◎
             </div>
             <h2
-              className="text-base font-semibold text-charcoal mb-3"
+              className="text-base font-semibold text-dark mb-3"
               style={{ fontFamily: "Playfair Display, Georgia, serif" }}
             >
               Indirizzo
             </h2>
-            <address className="not-italic text-sm text-warm-gray leading-relaxed">
+            <address className="not-italic text-sm text-gray leading-relaxed">
               Via Giuseppe Verdi, 14
               <br />
               20121 Milano (MI)
@@ -75,7 +75,7 @@ export default function ContattiPage() {
               href={mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 mt-4 text-xs font-semibold text-sage-dark hover:text-charcoal transition-colors"
+              className="inline-flex items-center gap-1.5 mt-4 text-xs font-semibold text-primary hover:text-dark transition-colors"
             >
               Apri in Google Maps
               <span aria-hidden="true">↗</span>
@@ -85,39 +85,39 @@ export default function ContattiPage() {
           {/* Phone & Email */}
           <Card>
             <div
-              className="w-12 h-12 rounded-xl bg-sage-light text-sage-dark flex items-center justify-center text-xl mb-4"
+              className="w-12 h-12 rounded-xl bg-surface-alt text-primary flex items-center justify-center text-xl mb-4"
               aria-hidden="true"
             >
               ✦
             </div>
             <h2
-              className="text-base font-semibold text-charcoal mb-3"
+              className="text-base font-semibold text-dark mb-3"
               style={{ fontFamily: "Playfair Display, Georgia, serif" }}
             >
               Recapiti
             </h2>
             <dl className="space-y-3 text-sm">
               <div>
-                <dt className="text-xs text-sage font-medium tracking-wide uppercase mb-0.5">
+                <dt className="text-xs text-muted font-medium tracking-wide uppercase mb-0.5">
                   Telefono
                 </dt>
                 <dd>
                   <a
                     href="tel:+390212345678"
-                      className="text-warm-gray hover:text-charcoal transition-colors"
+                      className="text-gray hover:text-dark transition-colors"
                   >
                     02 1234 5678
                   </a>
                 </dd>
               </div>
               <div>
-                <dt className="text-xs text-sage font-medium tracking-wide uppercase mb-0.5">
+                <dt className="text-xs text-muted font-medium tracking-wide uppercase mb-0.5">
                   Email
                 </dt>
                 <dd>
                   <a
                     href="mailto:info@studiosparano.it"
-                    className="text-warm-gray hover:text-charcoal transition-colors break-all"
+                    className="text-gray hover:text-dark transition-colors break-all"
                   >
                     info@studiosparano.it
                   </a>
@@ -129,13 +129,13 @@ export default function ContattiPage() {
           {/* Hours */}
           <Card>
             <div
-              className="w-12 h-12 rounded-xl bg-sage-light text-sage-dark flex items-center justify-center text-xl mb-4"
+              className="w-12 h-12 rounded-xl bg-surface-alt text-primary flex items-center justify-center text-xl mb-4"
               aria-hidden="true"
             >
               ⊕
             </div>
             <h2
-              className="text-base font-semibold text-charcoal mb-3"
+              className="text-base font-semibold text-dark mb-3"
               style={{ fontFamily: "Playfair Display, Georgia, serif" }}
             >
               Orari di apertura
@@ -143,12 +143,12 @@ export default function ContattiPage() {
             <dl className="space-y-1.5">
               {orari.map(({ day, hours }) => (
                 <div key={day} className="flex justify-between text-sm">
-                  <dt className="text-warm-gray">{day}</dt>
+                  <dt className="text-gray">{day}</dt>
                   <dd
                     className={`font-medium ${
                       hours === "Chiuso"
-                        ? "text-warm-gray opacity-50"
-                        : "text-charcoal"
+                        ? "text-gray opacity-50"
+                        : "text-dark"
                     }`}
                   >
                     {hours}
@@ -160,13 +160,13 @@ export default function ContattiPage() {
         </div>
 
         {/* Map placeholder / link */}
-        <div className="rounded-2xl overflow-hidden border border-cream shadow-sm">
+        <div className="rounded-2xl overflow-hidden border border-border shadow-sm">
           <a
             href={mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visualizza lo studio su Google Maps (apre in una nuova finestra)"
-            className="group relative bg-cream h-56 md:h-80 flex items-center justify-center"
+            className="group relative bg-surface-alt h-56 md:h-80 flex items-center justify-center"
           >
             {/* Decorative grid mimicking a map */}
             <div
@@ -193,18 +193,18 @@ export default function ContattiPage() {
               {/* Pin */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="flex flex-col items-center">
-                  <div className="w-5 h-5 rounded-full bg-sage-dark border-2 border-white shadow-lg" />
-                  <div className="w-0.5 h-4 bg-sage-dark" />
+                  <div className="w-5 h-5 rounded-full bg-accent border-2 border-white shadow-lg" />
+                  <div className="w-0.5 h-4 bg-accent" />
                 </div>
               </div>
             </div>
 
             {/* Label */}
-            <div className="relative z-10 bg-white/90 backdrop-blur-sm rounded-xl px-5 py-3 shadow text-center group-hover:shadow-md transition-shadow">
-              <p className="text-sm font-semibold text-charcoal">
+            <div className="relative z-10 bg-surface/90 backdrop-blur-sm rounded-xl px-5 py-3 shadow text-center group-hover:shadow-md transition-shadow">
+              <p className="text-sm font-semibold text-dark">
                 Via Giuseppe Verdi, 14 – Milano
               </p>
-              <p className="text-xs text-sage-dark mt-1 flex items-center justify-center gap-1">
+              <p className="text-xs text-primary mt-1 flex items-center justify-center gap-1">
                 Apri in Google Maps
                 <span aria-hidden="true">↗</span>
               </p>
@@ -233,16 +233,16 @@ export default function ContattiPage() {
           ].map((item) => (
             <div
               key={item.title}
-              className="flex items-start gap-3 p-4 rounded-xl bg-cream"
+              className="flex items-start gap-3 p-4 rounded-xl bg-surface-alt"
             >
               <span className="text-2xl shrink-0" aria-hidden="true">
                 {item.icon}
               </span>
               <div>
-                <h3 className="text-sm font-semibold text-charcoal mb-1">
+                <h3 className="text-sm font-semibold text-dark mb-1">
                   {item.title}
                 </h3>
-                <p className="text-xs text-warm-gray leading-relaxed">
+                <p className="text-xs text-gray leading-relaxed">
                   {item.desc}
                 </p>
               </div>
