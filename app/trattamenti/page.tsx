@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Trattamenti | Studio Dentistico Sparano",
     description:
-      "Scopri la gamma completa di trattamenti dentistici dello Studio Sparano a Milano.",
+      "Scopri la gamma completa di trattamenti dentistici dello Studio Sparano.",
     url: "https://studiodentisticosparano.it/trattamenti",
   },
 };
@@ -205,9 +205,7 @@ export default function TrattamentiPage() {
               >
                 {cat.title}
               </h2>
-              <p className="text-gray max-w-2xl leading-relaxed">
-                {cat.intro}
-              </p>
+              <p className="text-gray max-w-2xl leading-relaxed">{cat.intro}</p>
             </div>
           </div>
 
@@ -220,9 +218,7 @@ export default function TrattamentiPage() {
                 <h3 className="text-sm font-semibold text-dark mb-2">
                   {t.name}
                 </h3>
-                <p className="text-xs text-gray leading-relaxed">
-                  {t.desc}
-                </p>
+                <p className="text-xs text-gray leading-relaxed">{t.desc}</p>
               </div>
             ))}
           </div>

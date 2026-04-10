@@ -4,11 +4,10 @@ import { Section, SectionHeader, Card, Button } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Chi siamo",
   description:
-    "Conosci il team dello Studio Dentistico Sparano a Milano: medici specializzati, storia dello studio e filosofia di cura.",
+    "Conosci il team dello Studio Dentistico Sparano: medici specializzati, storia dello studio e filosofia di cura.",
   openGraph: {
     title: "Chi siamo | Studio Dentistico Sparano",
-    description:
-      "Il team di professionisti dello Studio Dentistico Sparano a Milano.",
+    description: "Il team di professionisti dello Studio Dentistico Sparano.",
     url: "https://studiodentisticosparano.it/chi-siamo",
   },
 };

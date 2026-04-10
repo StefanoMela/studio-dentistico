@@ -27,8 +27,8 @@ export default function Footer() {
               Specialisti del sorriso
             </p>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
-              Odontoiatria estetica e conservativa a Milano, con oltre vent'anni
-              di esperienza al servizio del tuo sorriso.
+              Odontoiatria estetica e conservativa, con oltre vent'anni di
+              esperienza al servizio del tuo sorriso.
             </p>
           </div>
 

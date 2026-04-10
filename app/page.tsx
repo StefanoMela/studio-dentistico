@@ -9,13 +9,13 @@ import {
 } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Studio Dentistico Sparano | Specialisti del sorriso a Milano",
+  title: "Studio Dentistico Sparano | Specialisti del sorriso",
   description:
-    "Studio dentistico a Milano con oltre 20 anni di esperienza. Odontoiatria estetica, implantologia, ortodonzia e cure preventive. Prenota la tua visita.",
+    "Studio dentistico con oltre 20 anni di esperienza. Odontoiatria estetica, implantologia, ortodonzia e cure preventive. Prenota la tua visita.",
   openGraph: {
-    title: "Studio Dentistico Sparano | Specialisti del sorriso a Milano",
+    title: "Studio Dentistico Sparano | Specialisti del sorriso",
     description:
-      "Studio dentistico a Milano con oltre 20 anni di esperienza. Odontoiatria estetica, implantologia, ortodonzia.",
+      "Studio dentistico con oltre 20 anni di esperienza. Odontoiatria estetica, implantologia, ortodonzia.",
     url: "https://studiodentisticosparano.it",
   },
 };
@@ -78,7 +78,7 @@ export default function HomePage() {
         <div className="relative max-w-6xl mx-auto px-5 md:px-8 py-20 md:py-32">
           <div className="max-w-2xl animate-fade-up">
             <p className="text-xs font-semibold tracking-[0.3em] text-muted uppercase mb-5">
-              Studio Dentistico Sparano · Milano
+              Studio Dentistico Sparano ·
             </p>
             <h1
               className="text-4xl sm:text-5xl md:text-6xl font-semibold text-dark leading-[1.12] mb-6"
@@ -145,9 +145,7 @@ export default function HomePage() {
               >
                 {item.title}
               </h3>
-              <p className="text-sm text-gray leading-relaxed">
-                {item.desc}
-              </p>
+              <p className="text-sm text-gray leading-relaxed">{item.desc}</p>
             </Card>
           ))}
         </div>
@@ -173,9 +171,7 @@ export default function HomePage() {
               >
                 {t.title}
               </h3>
-              <p className="text-sm text-gray leading-relaxed mb-5">
-                {t.desc}
-              </p>
+              <p className="text-sm text-gray leading-relaxed mb-5">{t.desc}</p>
               <span className="text-xs font-semibold tracking-wide text-primary group-hover:gap-2 flex items-center gap-1">
                 Scopri di più
                 <span

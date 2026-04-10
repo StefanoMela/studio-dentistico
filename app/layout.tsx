@@ -15,11 +15,11 @@ import CookieBanner from "@/components/layout/CookieBanner";
 export const metadata: Metadata = {
   metadataBase: new URL("https://studiodentisticosparano.it"),
   title: {
-    default: "Studio Dentistico Sparano | Specialisti del sorriso a Milano",
+    default: "Studio Dentistico Sparano | Specialisti del sorriso",
     template: "%s | Studio Dentistico Sparano",
   },
   description:
-    "Studio dentistico a Milano con oltre 20 anni di esperienza. Odontoiatria estetica, implantologia, ortodonzia e cure preventive in un ambiente moderno e accogliente.",
+    "Studio dentistico con oltre 20 anni di esperienza. Odontoiatria estetica, implantologia, ortodonzia e cure preventive in un ambiente moderno e accogliente.",
   keywords: [
     "dentista Milano",
     "studio dentistico",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "it_IT",
     siteName: "Studio Dentistico Sparano",
-    title: "Studio Dentistico Sparano | Specialisti del sorriso a Milano",
+    title: "Studio Dentistico Sparano | Specialisti del sorriso",
     description:
-      "Studio dentistico a Milano con oltre 20 anni di esperienza. Odontoiatria estetica, implantologia, ortodonzia.",
+      "Studio dentistico con oltre 20 anni di esperienza. Odontoiatria estetica, implantologia, ortodonzia.",
   },
 };
 

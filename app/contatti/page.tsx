@@ -4,11 +4,10 @@ import { Section, Card } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Contatti",
   description:
-    "Contatta lo Studio Dentistico Sparano a Milano: indirizzo, orari, telefono ed email. Siamo in Via Giuseppe Verdi 14.",
+    "Contatta lo Studio Dentistico Sparano: indirizzo, orari, telefono ed email. Siamo in Via Giuseppe Verdi 14.",
   openGraph: {
     title: "Contatti | Studio Dentistico Sparano",
-    description:
-      "Indirizzo, orari e recapiti dello Studio Dentistico Sparano a Milano.",
+    description: "Indirizzo, orari e recapiti dello Studio Dentistico Sparano.",
     url: "https://studiodentisticosparano.it/contatti",
   },
 };
@@ -104,7 +103,7 @@ export default function ContattiPage() {
                 <dd>
                   <a
                     href="tel:+390212345678"
-                      className="text-gray hover:text-dark transition-colors"
+                    className="text-gray hover:text-dark transition-colors"
                   >
                     02 1234 5678
                   </a>
@@ -146,9 +145,7 @@ export default function ContattiPage() {
                   <dt className="text-gray">{day}</dt>
                   <dd
                     className={`font-medium ${
-                      hours === "Chiuso"
-                        ? "text-gray opacity-50"
-                        : "text-dark"
+                      hours === "Chiuso" ? "text-gray opacity-50" : "text-dark"
                     }`}
                   >
                     {hours}
@@ -242,9 +239,7 @@ export default function ContattiPage() {
                 <h3 className="text-sm font-semibold text-dark mb-1">
                   {item.title}
                 </h3>
-                <p className="text-xs text-gray leading-relaxed">
-                  {item.desc}
-                </p>
+                <p className="text-xs text-gray leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
