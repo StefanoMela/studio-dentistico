@@ -10,15 +10,12 @@ export const metadata: Metadata = {
 export default function CookiePolicyPage() {
   const lastUpdate = "10 aprile 2025";
   return (
-    <Section bg="ivory">
+    <Section bg="white">
       <div className="max-w-2xl mx-auto">
-        <p className="text-xs font-semibold tracking-[0.25em] text-muted uppercase mb-3">
+        <p className="text-xs font-semibold tracking-[0.25em] text-primary uppercase mb-3">
           Informativa legale
         </p>
-        <h1
-          className="text-3xl md:text-4xl font-semibold text-dark mb-3 leading-tight"
-          style={{ fontFamily: "Playfair Display, Georgia, serif" }}
-        >
+        <h1 className="font-serif text-3xl md:text-4xl font-semibold text-dark mb-3 leading-tight">
           Cookie Policy
         </h1>
         <p className="text-sm text-gray mb-10">

@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { Section, SectionHeader, Card, Button } from "@/components/ui";
+import { Section, SectionHeader, Card, Button, StatCard } from "@/components/ui";
+import {
+  UsersIcon,
+  HeartPulseIcon,
+  ShieldCheckIcon,
+  BrainIcon,
+  ArrowRightIcon,
+} from "@/components/ui/icons";
 
 export const metadata: Metadata = {
   title: "Chi siamo",
@@ -17,69 +24,85 @@ const team = [
     name: "Dott. Marco Sparano",
     role: "Fondatore & Responsabile clinico",
     spec: "Odontoiatria generale, implantologia e chirurgia orale",
-    bio: "Laureato in Odontoiatria presso l'Università degli Studi di Milano, il Dott. Sparano ha conseguito un master in Implantologia presso l'Università di Barcellona. Con oltre vent'anni di esperienza, guida il team con passione e precisione.",
-    initials: "MB",
+    bio: "Laureato in Odontoiatria presso l'Universita degli Studi di Milano, il Dott. Sparano ha conseguito un master in Implantologia presso l'Universita di Barcellona. Con oltre vent'anni di esperienza, guida il team con passione e precisione.",
+    initials: "MS",
+    color: "bg-primary/10 text-primary",
   },
   {
     name: "Dott.ssa Laura Ferretti",
     role: "Specialista in Ortodonzia",
     spec: "Ortodonzia fissa, allineatori trasparenti e ortodonzia pediatrica",
-    bio: "Specializzata in Ortodonzia presso l'Università di Bologna, la Dott.ssa Ferretti è membro attivo della Società Italiana di Ortodonzia. Si aggiorna costantemente con corsi internazionali per offrire le tecniche più innovative.",
+    bio: "Specializzata in Ortodonzia presso l'Universita di Bologna, la Dott.ssa Ferretti e membro attivo della Societa Italiana di Ortodonzia. Si aggiorna costantemente con corsi internazionali per offrire le tecniche piu innovative.",
     initials: "LF",
+    color: "bg-accent/10 text-accent-hover",
   },
   {
     name: "Dott. Andrea Conti",
     role: "Parodontologo",
     spec: "Parodontologia, chirurgia rigenerativa e perimplantite",
-    bio: "Il Dott. Conti si è specializzato in Parodontologia a Siena e ha svolto un fellowship in chirurgia rigenerativa a Zurigo. La sua competenza è fondamentale per i casi complessi che richiedono la riabilitazione dei tessuti parodontali.",
+    bio: "Il Dott. Conti si e specializzato in Parodontologia a Siena e ha svolto un fellowship in chirurgia rigenerativa a Zurigo. La sua competenza e fondamentale per i casi complessi che richiedono la riabilitazione dei tessuti parodontali.",
     initials: "AC",
+    color: "bg-secondary/10 text-secondary",
   },
   {
     name: "Dott.ssa Sofia Marchetti",
     role: "Odontoiatra ed Endodontista",
     spec: "Endodonzia, odontoiatria conservativa e pedodonzia",
-    bio: "Laureata con lode a Firenze, la Dott.ssa Marchetti ha una spiccata sensibilità verso i pazienti pediatrici e i casi di endodonzia complessa. La sua attenzione al dettaglio la rende un punto di riferimento per i casi più delicati.",
+    bio: "Laureata con lode a Firenze, la Dott.ssa Marchetti ha una spiccata sensibilita verso i pazienti pediatrici e i casi di endodonzia complessa. La sua attenzione al dettaglio la rende un punto di riferimento per i casi piu delicati.",
     initials: "SM",
+    color: "bg-primary/10 text-primary",
   },
 ];
 
 const values = [
   {
+    icon: <HeartPulseIcon size={24} />,
     title: "Ascolto",
-    desc: "Prima di tutto, ti ascoltiamo. Capire le tue preoccupazioni e aspettative è il primo passo per un trattamento riuscito.",
+    desc: "Prima di tutto, ti ascoltiamo. Capire le tue preoccupazioni e aspettative e il primo passo per un trattamento riuscito.",
   },
   {
+    icon: <ShieldCheckIcon size={24} />,
     title: "Trasparenza",
     desc: "Spieghiamo ogni trattamento in modo chiaro, con preventivi dettagliati e senza sorprese. Hai il diritto di scegliere in modo consapevole.",
   },
   {
+    icon: <BrainIcon size={24} />,
     title: "Aggiornamento continuo",
-    desc: "La medicina evolve. Il nostro team partecipa ogni anno a congressi e corsi di formazione per portarti le soluzioni più efficaci e sicure.",
+    desc: "La medicina evolve. Il nostro team partecipa ogni anno a congressi e corsi di formazione per portarti le soluzioni piu efficaci e sicure.",
   },
   {
+    icon: <UsersIcon size={24} />,
     title: "Ambiente sicuro",
     desc: "Seguiamo rigorosi protocolli di sterilizzazione e igiene per garantire la massima sicurezza in ogni visita.",
   },
+];
+
+const stats = [
+  { value: "+2.000", label: "Pazienti seguiti ogni anno" },
+  { value: "20+", label: "Anni di esperienza" },
+  { value: "4", label: "Specialisti del team" },
+  { value: "96%", label: "Tasso di soddisfazione" },
 ];
 
 export default function ChiSiamoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-surface-alt py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-5 md:px-8">
+      <section className="relative bg-gradient-to-b from-surface-alt to-surface py-20 md:py-28 overflow-hidden">
+        <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary/5 blur-3xl translate-x-1/2 -translate-y-1/2" />
+        </div>
+        
+        <div className="relative max-w-6xl mx-auto px-5 md:px-8">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold tracking-[0.3em] text-muted uppercase mb-4">
+            <p className="text-xs font-semibold tracking-[0.3em] text-primary uppercase mb-4">
               Il nostro team
             </p>
-            <h1
-              className="text-4xl md:text-5xl font-semibold text-dark leading-tight mb-5"
-              style={{ fontFamily: "Playfair Display, Georgia, serif" }}
-            >
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-dark leading-tight mb-5 text-balance">
               Professionisti al servizio del tuo sorriso
             </h1>
-            <p className="text-gray leading-relaxed">
-              Lo Studio Dentistico Sparano è nato nel 2003 con una visione
+            <p className="text-gray text-base md:text-lg leading-relaxed">
+              Lo Studio Dentistico Sparano e nato nel 2003 con una visione
               chiara: offrire cure odontoiatriche di eccellenza in un ambiente
               umano e accogliente. Oggi siamo un team di quattro specialisti che
               condividono la stessa filosofia di cura.
@@ -89,49 +112,38 @@ export default function ChiSiamoPage() {
       </section>
 
       {/* Storia */}
-      <Section bg="ivory">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+      <Section bg="white">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <SectionHeader
               eyebrow="La nostra storia"
-              title="Vent'anni di passione per la cura orale"
+              title="Vent&apos;anni di passione per la cura orale"
             />
-            <p className="text-gray leading-relaxed mb-5">
-              Lo studio nasce dalla visione del Dott. Marco Sparano, che dopo
-              anni di formazione in Italia e all'estero decide di fondare uno
-              studio in cui la qualità clinica si unisse all'attenzione genuina
-              verso il paziente.
-            </p>
-            <p className="text-gray leading-relaxed mb-5">
-              Negli anni abbiamo investito in tecnologie all'avanguardia —
-              scanner intraorale 3D, radiologia digitale a bassa emissione,
-              laser dentale — senza mai perdere di vista ciò che conta davvero:
-              la relazione con le persone che ci affidano il loro sorriso.
-            </p>
-            <p className="text-gray leading-relaxed">
-              Oggi lo studio è cresciuto in dimensioni e competenze, ma la
-              nostra filosofia rimane invariata: ogni paziente è unico e merita
-              un piano di trattamento cucito su misura.
-            </p>
+            <div className="space-y-5 text-gray leading-relaxed">
+              <p>
+                Lo studio nasce dalla visione del Dott. Marco Sparano, che dopo
+                anni di formazione in Italia e all&apos;estero decide di fondare uno
+                studio in cui la qualita clinica si unisse all&apos;attenzione genuina
+                verso il paziente.
+              </p>
+              <p>
+                Negli anni abbiamo investito in tecnologie all&apos;avanguardia —
+                scanner intraorale 3D, radiologia digitale a bassa emissione,
+                laser dentale — senza mai perdere di vista cio che conta davvero:
+                la relazione con le persone che ci affidano il loro sorriso.
+              </p>
+              <p>
+                Oggi lo studio e cresciuto in dimensioni e competenze, ma la
+                nostra filosofia rimane invariata: ogni paziente e unico e merita
+                un piano di trattamento cucito su misura.
+              </p>
+            </div>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 gap-4">
-            {[
-              { value: "+2.000", label: "Pazienti seguiti ogni anno" },
-              { value: "20+", label: "Anni di esperienza" },
-              { value: "4", label: "Specialisti del team" },
-              { value: "96%", label: "Tasso di soddisfazione" },
-            ].map((s) => (
-              <Card key={s.label} className="text-center">
-                <p
-                  className="text-3xl md:text-4xl font-semibold text-primary mb-2"
-                  style={{ fontFamily: "Playfair Display, Georgia, serif" }}
-                >
-                  {s.value}
-                </p>
-                <p className="text-xs text-gray leading-snug">{s.label}</p>
-              </Card>
+            {stats.map((s) => (
+              <StatCard key={s.label} value={s.value} label={s.label} />
             ))}
           </div>
         </div>
@@ -144,29 +156,25 @@ export default function ChiSiamoPage() {
           title="Conosci i nostri specialisti"
           subtitle="Medici con percorsi formativi di eccellenza, uniti dalla stessa passione per la cura."
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {team.map((member) => (
             <Card key={member.name} className="flex gap-5">
               {/* Avatar */}
               <div
-                className="w-14 h-14 rounded-xl bg-surface-alt text-primary flex items-center justify-center font-semibold text-base shrink-0"
-                style={{ fontFamily: "Playfair Display, Georgia, serif" }}
+                className={`w-16 h-16 rounded-2xl ${member.color} flex items-center justify-center font-serif font-semibold text-lg shrink-0`}
                 aria-hidden="true"
               >
                 {member.initials}
               </div>
               <div>
-                <h2
-                  className="text-base font-semibold text-dark mb-0.5"
-                  style={{ fontFamily: "Playfair Display, Georgia, serif" }}
-                >
+                <h2 className="font-serif text-lg font-semibold text-dark mb-1">
                   {member.name}
                 </h2>
                 <p className="text-xs font-medium text-primary mb-1">
                   {member.role}
                 </p>
                 <p className="text-xs text-muted italic mb-3">{member.spec}</p>
-                <p className="text-xs text-gray leading-relaxed">
+                <p className="text-sm text-gray leading-relaxed">
                   {member.bio}
                 </p>
               </div>
@@ -176,7 +184,7 @@ export default function ChiSiamoPage() {
       </Section>
 
       {/* Values */}
-      <Section bg="ivory">
+      <Section bg="white">
         <SectionHeader
           eyebrow="La nostra filosofia"
           title="I valori che guidano il nostro lavoro"
@@ -185,14 +193,10 @@ export default function ChiSiamoPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((v) => (
             <div key={v.title} className="text-center px-4">
-              <div
-                className="w-10 h-px bg-sage mx-auto mb-4"
-                aria-hidden="true"
-              />
-              <h3
-                className="text-base font-semibold text-dark mb-3"
-                style={{ fontFamily: "Playfair Display, Georgia, serif" }}
-              >
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5 text-primary">
+                {v.icon}
+              </div>
+              <h3 className="font-serif text-lg font-semibold text-dark mb-3">
                 {v.title}
               </h3>
               <p className="text-sm text-gray leading-relaxed">{v.desc}</p>
@@ -202,22 +206,20 @@ export default function ChiSiamoPage() {
       </Section>
 
       {/* CTA */}
-      <Section bg="cream">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-3xl mx-auto text-center md:text-left">
+      <Section bg="warm">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-3xl mx-auto text-center md:text-left">
           <div>
-            <h2
-              className="text-2xl font-semibold text-dark mb-2"
-              style={{ fontFamily: "Playfair Display, Georgia, serif" }}
-            >
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-dark mb-3">
               Vieni a conoscerci
             </h2>
-            <p className="text-gray text-sm">
-              La prima visita è il modo migliore per iniziare un percorso
+            <p className="text-gray">
+              La prima visita e il modo migliore per iniziare un percorso
               insieme.
             </p>
           </div>
           <Button href="/contatti" className="shrink-0">
             Prenota ora
+            <ArrowRightIcon size={18} />
           </Button>
         </div>
       </Section>

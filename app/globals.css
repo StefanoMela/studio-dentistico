@@ -9,27 +9,33 @@
 @import "@fontsource/dm-sans/600.css";
 
 @theme {
-  /* Brand */
-  --color-primary: #1b4fbe;
-  --color-secondary: #4a7ca5;
-  --color-accent: #cb717a;
+  /* Brand - Sophisticated dental palette */
+  --color-primary: #0d6e6e;
+  --color-primary-light: #14a3a3;
+  --color-primary-dark: #084848;
+  --color-secondary: #5a8f8f;
+  --color-accent: #c9a86c;
+  --color-accent-hover: #b8944f;
 
   /* Surfaces */
   --color-surface: #ffffff;
-  --color-surface-alt: #f2f3f9;
-  --color-border: #c8d3e6;
+  --color-surface-alt: #f8fafa;
+  --color-surface-warm: #faf9f7;
+  --color-border: #e2e8e8;
+  --color-border-hover: #c5d1d1;
 
   /* Text */
-  --color-dark: #1a2753;
-  --color-gray: #3d5166;
-  --color-muted: #6da881;
+  --color-dark: #1a2f2f;
+  --color-gray: #4a5f5f;
+  --color-muted: #7a9090;
 
   /* State */
-  --color-success: #2d7d47;
-  --color-error: #c5003b;
+  --color-success: #2d7d5a;
+  --color-error: #c53d3d;
 
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "DM Sans", system-ui, sans-serif;
+  /* Typography */
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
 }
 
 * { box-sizing: border-box; }
@@ -65,10 +71,19 @@ body {
   from { opacity: 0; transform: translateY(-12px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
 
-.animate-fade-up   { animation: fadeUp   0.7s ease-out forwards; }
+.animate-fade-up   { animation: fadeUp   0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
 .animate-fade-in   { animation: fadeIn   0.5s ease-out forwards; }
 .animate-slide-down{ animation: slideDown 0.4s ease-out forwards; }
+.animate-float     { animation: float 3s ease-in-out infinite; }
 
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
@@ -76,17 +91,71 @@ body {
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
 
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px -8px rgba(13, 110, 110, 0.15);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
 .prose-policy h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: 1.35rem; font-weight: 600;
   color: var(--color-dark);
-  margin-top: 2rem; margin-bottom: 0.75rem;
+  margin-top: 2.5rem; margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+.prose-policy h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
 }
 .prose-policy h3 {
   font-size: 1.05rem; font-weight: 600;
   color: var(--color-primary);
-  margin-top: 1.5rem; margin-bottom: 0.5rem;
+  margin-top: 1.75rem; margin-bottom: 0.75rem;
 }
-.prose-policy p  { color: var(--color-gray); line-height: 1.75; margin-bottom: 1rem; }
-.prose-policy ul { list-style: disc; padding-left: 1.5rem; color: var(--color-gray); margin-bottom: 1rem; }
-.prose-policy ul li { margin-bottom: 0.35rem; line-height: 1.65; }
+.prose-policy p { 
+  color: var(--color-gray); 
+  line-height: 1.8; 
+  margin-bottom: 1.25rem; 
+}
+.prose-policy ul { 
+  list-style: none; 
+  padding-left: 0; 
+  color: var(--color-gray); 
+  margin-bottom: 1.25rem; 
+}
+.prose-policy ul li { 
+  margin-bottom: 0.5rem; 
+  line-height: 1.7; 
+  padding-left: 1.5rem;
+  position: relative;
+}
+.prose-policy ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}

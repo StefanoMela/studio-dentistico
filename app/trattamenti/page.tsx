@@ -2,10 +2,17 @@ import type { Metadata } from "next";
 import {
   Section,
   SectionHeader,
-  Card,
-  IconWrapper,
   Button,
 } from "@/components/ui";
+import {
+  SparkleIcon,
+  ToothIcon,
+  TargetIcon,
+  ShieldCheckIcon,
+  HeartPulseIcon,
+  SmileIcon,
+  ArrowRightIcon,
+} from "@/components/ui/icons";
 
 export const metadata: Metadata = {
   title: "Trattamenti",
@@ -22,14 +29,14 @@ export const metadata: Metadata = {
 const categories = [
   {
     id: "estetica",
-    icon: "✦",
+    icon: <SparkleIcon size={24} />,
     title: "Odontoiatria Estetica",
     intro:
-      "Un sorriso bello è un sorriso sano. Combiniamo tecniche estetiche di alto livello con la cura della salute dentale per risultati naturali e duraturi.",
+      "Un sorriso bello e un sorriso sano. Combiniamo tecniche estetiche di alto livello con la cura della salute dentale per risultati naturali e duraturi.",
     treatments: [
       {
         name: "Sbiancamento professionale",
-        desc: "Trattamento in studio o domiciliare per denti visibilmente più sparano in tempi brevi.",
+        desc: "Trattamento in studio o domiciliare per denti visibilmente piu bianchi in tempi brevi.",
       },
       {
         name: "Faccette in ceramica",
@@ -47,7 +54,7 @@ const categories = [
   },
   {
     id: "implantologia",
-    icon: "⊕",
+    icon: <ToothIcon size={24} />,
     title: "Implantologia",
     intro:
       "Gli impianti dentali sono la soluzione definitiva per sostituire i denti mancanti. Utilizziamo impianti in titanio di ultima generazione con protocolli minimamente invasivi.",
@@ -72,7 +79,7 @@ const categories = [
   },
   {
     id: "ortodonzia",
-    icon: "◎",
+    icon: <TargetIcon size={24} />,
     title: "Ortodonzia",
     intro:
       "Correggiamo la posizione dei denti e la funzione occlusale per migliorare sia l'estetica che la salute della bocca, con soluzioni per adulti e bambini.",
@@ -97,10 +104,10 @@ const categories = [
   },
   {
     id: "prevenzione",
-    icon: "❋",
+    icon: <ShieldCheckIcon size={24} />,
     title: "Prevenzione e Igiene",
     intro:
-      "La prevenzione è la base della salute orale. Pulizie professionali regolari e programmi personalizzati per mantenere i tuoi denti sani nel tempo.",
+      "La prevenzione e la base della salute orale. Pulizie professionali regolari e programmi personalizzati per mantenere i tuoi denti sani nel tempo.",
     treatments: [
       {
         name: "Igiene orale professionale",
@@ -116,16 +123,16 @@ const categories = [
       },
       {
         name: "Istruzione all'igiene domiciliare",
-        desc: "Consigli personalizzati su tecnica di spazzolamento, filo interdentale e prodotti più adatti.",
+        desc: "Consigli personalizzati su tecnica di spazzolamento, filo interdentale e prodotti piu adatti.",
       },
     ],
   },
   {
     id: "parodontologia",
-    icon: "◑",
+    icon: <HeartPulseIcon size={24} />,
     title: "Parodontologia",
     intro:
-      "Le malattie gengivali sono tra le cause più frequenti di perdita dei denti. La nostra parodontologa offre diagnosi precoce e trattamenti mirati.",
+      "Le malattie gengivali sono tra le cause piu frequenti di perdita dei denti. La nostra parodontologa offre diagnosi precoce e trattamenti mirati.",
     treatments: [
       {
         name: "Terapia parodontale causale",
@@ -143,10 +150,10 @@ const categories = [
   },
   {
     id: "pedodonzia",
-    icon: "◇",
+    icon: <SmileIcon size={24} />,
     title: "Pedodonzia",
     intro:
-      "I bambini meritano cure speciali. Il nostro approccio pediatrico è pensato per rendere la visita dal dentista un'esperienza positiva fin dalla prima volta.",
+      "I bambini meritano cure speciali. Il nostro approccio pediatrico e pensato per rendere la visita dal dentista un'esperienza positiva fin dalla prima volta.",
     treatments: [
       {
         name: "Prima visita pediatrica",
@@ -154,7 +161,7 @@ const categories = [
       },
       {
         name: "Trattamento della carie nei bambini",
-        desc: "Cure dei denti da latte e permanenti con materiali e tecniche adatte all'età.",
+        desc: "Cure dei denti da latte e permanenti con materiali e tecniche adatte all'eta.",
       },
       {
         name: "Fluoroprofilassi",
@@ -168,22 +175,26 @@ export default function TrattamentiPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-surface-alt py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-5 md:px-8">
-          <p className="text-xs font-semibold tracking-[0.3em] text-muted uppercase mb-4">
-            I nostri servizi
-          </p>
-          <h1
-            className="text-4xl md:text-5xl font-semibold text-dark leading-tight mb-5 max-w-2xl"
-            style={{ fontFamily: "Playfair Display, Georgia, serif" }}
-          >
-            Trattamenti completi per ogni esigenza
-          </h1>
-          <p className="text-gray max-w-xl leading-relaxed">
-            Dall'estetica alla prevenzione, dalla chirurgia all'ortodonzia: ogni
-            paziente trova nel nostro studio una risposta professionale alle
-            proprie necessità.
-          </p>
+      <section className="relative bg-gradient-to-b from-surface-alt to-surface py-20 md:py-28 overflow-hidden">
+        {/* Decorative */}
+        <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-primary/5 blur-3xl translate-x-1/2 -translate-y-1/2" />
+        </div>
+        
+        <div className="relative max-w-6xl mx-auto px-5 md:px-8">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold tracking-[0.3em] text-primary uppercase mb-4">
+              I nostri servizi
+            </p>
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-dark leading-tight mb-5 text-balance">
+              Trattamenti completi per ogni esigenza
+            </h1>
+            <p className="text-gray text-base md:text-lg leading-relaxed">
+              Dall'estetica alla prevenzione, dalla chirurgia all'ortodonzia: ogni
+              paziente trova nel nostro studio una risposta professionale alle
+              proprie necessita.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -192,17 +203,14 @@ export default function TrattamentiPage() {
         <Section
           key={cat.id}
           id={cat.id}
-          bg={catIndex % 2 === 0 ? "ivory" : "cream"}
+          bg={catIndex % 2 === 0 ? "white" : "cream"}
         >
-          <div className="flex items-start gap-4 mb-8">
-            <IconWrapper>
-              <span aria-hidden="true">{cat.icon}</span>
-            </IconWrapper>
+          <div className="flex flex-col md:flex-row items-start gap-6 mb-10">
+            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+              {cat.icon}
+            </div>
             <div>
-              <h2
-                className="text-2xl md:text-3xl font-semibold text-dark mb-3"
-                style={{ fontFamily: "Playfair Display, Georgia, serif" }}
-              >
+              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-dark mb-3">
                 {cat.title}
               </h2>
               <p className="text-gray max-w-2xl leading-relaxed">{cat.intro}</p>
@@ -213,9 +221,9 @@ export default function TrattamentiPage() {
             {cat.treatments.map((t) => (
               <div
                 key={t.name}
-                className="bg-white rounded-xl p-5 border border-border shadow-sm"
+                className="group bg-white rounded-xl p-5 border border-border hover:border-primary/20 card-hover"
               >
-                <h3 className="text-sm font-semibold text-dark mb-2">
+                <h3 className="text-sm font-semibold text-dark mb-2 group-hover:text-primary transition-colors">
                   {t.name}
                 </h3>
                 <p className="text-xs text-gray leading-relaxed">{t.desc}</p>
@@ -228,21 +236,22 @@ export default function TrattamentiPage() {
       {/* CTA */}
       <Section bg="charcoal">
         <div className="text-center max-w-lg mx-auto">
-          <h2
-            className="text-2xl md:text-3xl font-semibold text-white mb-4"
-            style={{ fontFamily: "Playfair Display, Georgia, serif" }}
-          >
+          <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-6">
+            <ToothIcon size={28} className="text-primary-light" />
+          </div>
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-white mb-4 text-balance">
             Hai domande su un trattamento?
           </h2>
-          <p className="text-white/65 mb-7 text-sm leading-relaxed">
-            Contattaci per una consulenza iniziale. Ti aiuteremo a capire qual è
-            il percorso più adatto alle tue esigenze.
+          <p className="text-white/60 mb-8 text-sm leading-relaxed">
+            Contattaci per una consulenza iniziale. Ti aiuteremo a capire qual e
+            il percorso piu adatto alle tue esigenze.
           </p>
           <Button
             href="/contatti"
             className="bg-white text-dark hover:bg-surface-alt"
           >
             Contattaci
+            <ArrowRightIcon size={18} />
           </Button>
         </div>
       </Section>
