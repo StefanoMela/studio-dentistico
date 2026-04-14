@@ -222,22 +222,15 @@ export default function ChiSiamoPage() {
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white leading-tight mb-5 text-balance">
             Pronto a sorridere?
           </h2>
-          <p className="text-white/60 mb-10 leading-relaxed max-w-xl mx-auto">
+          <p className="text-white/80 mb-10 leading-relaxed max-w-xl mx-auto">
             Il nostro team è disponibile per rispondere a tutte le tue domande e aiutarti a prenotare una visita senza impegno. Contattaci oggi stesso.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              href="/contatti"
-              className="bg-white text-dark hover:bg-surface-alt shadow-lg hover:shadow-xl"
-            >
+            <Button href="/contatti" variant="inverted">
               Contattaci ora
               <ArrowRightIcon size={18} />
             </Button>
-            <Button
-              href="/trattamenti"
-              variant="ghost"
-              className="text-white/70 hover:text-white hover:bg-white/10"
-            >
+            <Button href="/trattamenti" variant="ghost-inverted">
               Scopri i servizi
             </Button>
           </div>

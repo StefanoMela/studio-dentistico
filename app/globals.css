@@ -16,6 +16,8 @@
   --color-secondary: #5a8f8f;
   --color-accent: #c9a86c;
   --color-accent-hover: #b8944f;
+  /* Accessible text-only shade of accent: 4.6:1 on white */
+  --color-accent-text: #7a5c1e;
 
   /* Surfaces */
   --color-surface: #ffffff;

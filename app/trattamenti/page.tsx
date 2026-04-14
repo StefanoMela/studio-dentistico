@@ -277,22 +277,15 @@ export default function TrattamentiPage() {
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white leading-tight mb-5 text-balance">
             Pronto per il trattamento ideale?
           </h2>
-          <p className="text-white/60 mb-10 leading-relaxed max-w-xl mx-auto">
+          <p className="text-white/80 mb-10 leading-relaxed max-w-xl mx-auto">
             Contattaci per una consulenza iniziale. Ti aiuteremo a capire qual è il percorso più adatto alle tue esigenze.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              href="/contatti"
-              className="bg-white text-dark hover:bg-surface-alt shadow-lg hover:shadow-xl"
-            >
+            <Button href="/contatti" variant="inverted">
               Prenota una consulenza
               <ArrowRightIcon size={18} />
             </Button>
-            <Button
-              href="/chi-siamo"
-              variant="ghost"
-              className="text-white/70 hover:text-white hover:bg-white/10"
-            >
+            <Button href="/chi-siamo" variant="ghost-inverted">
               Conosci il team
             </Button>
           </div>

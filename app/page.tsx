@@ -276,22 +276,15 @@ export default function HomePage() {
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white leading-tight mb-5 text-balance">
             Prenota la tua visita di controllo
           </h2>
-          <p className="text-white/60 mb-10 leading-relaxed max-w-xl mx-auto">
+          <p className="text-white/80 mb-10 leading-relaxed max-w-xl mx-auto">
             Una visita preventiva è il primo passo per un sorriso sano e duraturo. Contattaci per fissare un appuntamento, siamo disponibili dal lunedì al sabato.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              href="/contatti"
-              className="bg-white text-dark hover:bg-surface-alt shadow-lg hover:shadow-xl"
-            >
+            <Button href="/contatti" variant="inverted">
               Prenota una visita
               <ArrowRightIcon size={18} />
             </Button>
-            <Button
-              href="/chi-siamo"
-              variant="ghost"
-              className="text-white/70 hover:text-white hover:bg-white/10"
-            >
+            <Button href="/chi-siamo" variant="ghost-inverted">
               Conosci il team
             </Button>
           </div>
