@@ -7,6 +7,7 @@ import {
   Card,
   FeatureCard,
 } from "@/components/ui";
+import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
 import {
   AwardIcon,
   BrainIcon,
@@ -141,27 +142,16 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visual element */}
+            {/* Hero photo placeholder */}
             <div className="relative hidden lg:block animate-fade-up delay-200">
-              <div className="relative aspect-square max-w-md mx-auto">
-                {/* Background decoration */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/10 to-accent/10 rotate-6" />
-                <div className="absolute inset-0 rounded-3xl bg-surface border border-border shadow-xl">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6 animate-float">
-                        <ToothIcon size={40} className="text-primary" />
-                      </div>
-                      <p className="font-serif text-2xl font-semibold text-dark mb-2">
-                        Specialisti del sorriso
-                      </p>
-                      <p className="text-sm text-gray max-w-[200px] mx-auto">
-                        Un team di professionisti dedicato alla tua salute orale
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* Tilted background card for depth */}
+              <div aria-hidden="true" className="absolute inset-4 rounded-3xl bg-gradient-to-br from-primary/10 to-accent/10 rotate-3 scale-95" />
+              <PhotoPlaceholder
+                label="Foto hero – reception o sala d'attesa"
+                hint="Scatto luminoso dell'ingresso o dell'area di attesa dello studio, con luce naturale e atmosfera accogliente."
+                aspect="aspect-[4/5]"
+                className="relative shadow-2xl shadow-primary/10"
+              />
             </div>
           </div>
         </div>
@@ -185,6 +175,33 @@ export default function HomePage() {
               className={`animate-fade-up delay-${(i + 1) * 100}`}
             />
           ))}
+        </div>
+      </Section>
+
+      {/* Gallery strip */}
+      <Section bg="white">
+        <SectionHeader
+          eyebrow="Il nostro studio"
+          title="Ambienti moderni e accoglienti"
+          subtitle="Ogni spazio e stato progettato per metterti a tuo agio: dalla sala d'attesa alla poltrona, curi che ti senti al sicuro."
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <PhotoPlaceholder
+            label="Sala operatoria principale"
+            hint="Vista della poltrona operatoria con strumentazione digitale, illuminazione clinica e ambiente pulito e ordinato."
+            aspect="aspect-[3/2]"
+            className="sm:col-span-2 lg:col-span-1 lg:row-span-1"
+          />
+          <PhotoPlaceholder
+            label="Area di accoglienza / reception"
+            hint="Bancone della reception, arredi moderni, luce naturale. Trasmettere calore e professionalita al primo sguardo."
+            aspect="aspect-[3/2]"
+          />
+          <PhotoPlaceholder
+            label="Sala d'attesa"
+            hint="Poltroncine comode, riviste, verde decorativo. Atmosfera rilassante che riduce l'ansia del paziente."
+            aspect="aspect-[3/2]"
+          />
         </div>
       </Section>
 

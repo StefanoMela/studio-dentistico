@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Section, SectionHeader, Card, Button, StatCard } from "@/components/ui";
+import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
 import {
   UsersIcon,
   HeartPulseIcon,
@@ -140,11 +141,18 @@ export default function ChiSiamoPage() {
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-4">
-            {stats.map((s) => (
-              <StatCard key={s.label} value={s.value} label={s.label} />
-            ))}
+          {/* Studio photo + Stats */}
+          <div className="flex flex-col gap-5">
+            <PhotoPlaceholder
+              label="Foto storica o panoramica dello studio"
+              hint="Scatto d'insieme della sala principale o dell'esterno dello studio. Può essere una foto d'archivio che racconta la storia del luogo."
+              aspect="aspect-[16/9]"
+            />
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((s) => (
+                <StatCard key={s.label} value={s.value} label={s.label} />
+              ))}
+            </div>
           </div>
         </div>
       </Section>
@@ -158,14 +166,14 @@ export default function ChiSiamoPage() {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {team.map((member) => (
-            <Card key={member.name} className="flex gap-5">
-              {/* Avatar */}
-              <div
-                className={`w-16 h-16 rounded-2xl ${member.color} flex items-center justify-center font-serif font-semibold text-lg shrink-0`}
-                aria-hidden="true"
-              >
-                {member.initials}
-              </div>
+            <Card key={member.name} className="flex flex-col gap-5">
+              {/* Portrait photo placeholder */}
+              <PhotoPlaceholder
+                label={`Ritratto – ${member.name}`}
+                hint={`Foto professionale del ${member.role} in camice bianco, sfondo neutro o studio dentistico. Formato verticale 3:4.`}
+                aspect="aspect-[3/2]"
+                className="w-full"
+              />
               <div>
                 <h2 className="font-serif text-lg font-semibold text-dark mb-1">
                   {member.name}

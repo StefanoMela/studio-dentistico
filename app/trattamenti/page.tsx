@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import {
   Section,
   SectionHeader,
   Button,
 } from "@/components/ui";
+import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
 import {
   SparkleIcon,
   ToothIcon,
@@ -26,11 +28,21 @@ export const metadata: Metadata = {
   },
 };
 
-const categories = [
+const categories: {
+  id: string;
+  icon: ReactNode;
+  title: string;
+  intro: string;
+  photoLabel: string;
+  photoHint: string;
+  treatments: { name: string; desc: string }[];
+}[] = [
   {
     id: "estetica",
     icon: <SparkleIcon size={24} />,
     title: "Odontoiatria Estetica",
+    photoLabel: "Trattamento estetico – sbiancamento o faccette",
+    photoHint: "Primo piano di un sorriso luminoso prima/dopo trattamento estetico, oppure il dentista che applica faccette in ceramica.",
     intro:
       "Un sorriso bello e un sorriso sano. Combiniamo tecniche estetiche di alto livello con la cura della salute dentale per risultati naturali e duraturi.",
     treatments: [
@@ -56,6 +68,8 @@ const categories = [
     id: "implantologia",
     icon: <ToothIcon size={24} />,
     title: "Implantologia",
+    photoLabel: "Implantologia – intervento o modello 3D",
+    photoHint: "Immagine di un modello in resina di impianto dentale, o scatto in sala operatoria durante un'inserimento con luce chirurgica.",
     intro:
       "Gli impianti dentali sono la soluzione definitiva per sostituire i denti mancanti. Utilizziamo impianti in titanio di ultima generazione con protocolli minimamente invasivi.",
     treatments: [
@@ -81,6 +95,8 @@ const categories = [
     id: "ortodonzia",
     icon: <TargetIcon size={24} />,
     title: "Ortodonzia",
+    photoLabel: "Ortodonzia – allineatori o apparecchio fisso",
+    photoHint: "Sorriso di paziente con allineatori trasparenti, o foto clinica che mostra brackets applicati. Luce calda e tono positivo.",
     intro:
       "Correggiamo la posizione dei denti e la funzione occlusale per migliorare sia l'estetica che la salute della bocca, con soluzioni per adulti e bambini.",
     treatments: [
@@ -106,6 +122,8 @@ const categories = [
     id: "prevenzione",
     icon: <ShieldCheckIcon size={24} />,
     title: "Prevenzione e Igiene",
+    photoLabel: "Igiene professionale – igienista al lavoro",
+    photoHint: "Igienista dentale che esegue una pulizia professionale o una visita di controllo su paziente adulto. Ambiente luminoso.",
     intro:
       "La prevenzione e la base della salute orale. Pulizie professionali regolari e programmi personalizzati per mantenere i tuoi denti sani nel tempo.",
     treatments: [
@@ -131,6 +149,8 @@ const categories = [
     id: "parodontologia",
     icon: <HeartPulseIcon size={24} />,
     title: "Parodontologia",
+    photoLabel: "Parodontologia – gengive o terapia parodontale",
+    photoHint: "Foto clinica di terapia gengivale o scatto del medico che consulta una panoramica digitale per la diagnosi parodontale.",
     intro:
       "Le malattie gengivali sono tra le cause piu frequenti di perdita dei denti. La nostra parodontologa offre diagnosi precoce e trattamenti mirati.",
     treatments: [
@@ -152,6 +172,8 @@ const categories = [
     id: "pedodonzia",
     icon: <SmileIcon size={24} />,
     title: "Pedodonzia",
+    photoLabel: "Pedodonzia – dentista con paziente bambino",
+    photoHint: "Dentista sorridente che interagisce con un bambino sulla poltrona, atmosfera rassicurante e colorata. Preferire tono caldo e positivo.",
     intro:
       "I bambini meritano cure speciali. Il nostro approccio pediatrico e pensato per rendere la visita dal dentista un'esperienza positiva fin dalla prima volta.",
     treatments: [
@@ -205,6 +227,7 @@ export default function TrattamentiPage() {
           id={cat.id}
           bg={catIndex % 2 === 0 ? "white" : "cream"}
         >
+          {/* Category header */}
           <div className="flex flex-col md:flex-row items-start gap-6 mb-10">
             <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
               {cat.icon}
@@ -217,18 +240,27 @@ export default function TrattamentiPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {cat.treatments.map((t) => (
-              <div
-                key={t.name}
-                className="group bg-white rounded-xl p-5 border border-border hover:border-primary/20 card-hover"
-              >
-                <h3 className="text-sm font-semibold text-dark mb-2 group-hover:text-primary transition-colors">
-                  {t.name}
-                </h3>
-                <p className="text-xs text-gray leading-relaxed">{t.desc}</p>
-              </div>
-            ))}
+          {/* Two-column: photo + treatment cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 items-start">
+            <PhotoPlaceholder
+              label={cat.photoLabel}
+              hint={cat.photoHint}
+              aspect="aspect-[4/3]"
+            />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {cat.treatments.map((t) => (
+                <div
+                  key={t.name}
+                  className="group bg-white rounded-xl p-5 border border-border hover:border-primary/20 card-hover"
+                >
+                  <h3 className="text-sm font-semibold text-dark mb-2 group-hover:text-primary transition-colors">
+                    {t.name}
+                  </h3>
+                  <p className="text-xs text-gray leading-relaxed">{t.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </Section>
       ))}
