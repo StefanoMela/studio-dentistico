@@ -214,21 +214,33 @@ export default function ChiSiamoPage() {
       </Section>
 
       {/* CTA */}
-      <Section bg="warm">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-3xl mx-auto text-center md:text-left">
-          <div>
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-dark mb-3">
-              Vieni a conoscerci
-            </h2>
-            <p className="text-gray">
-              La prima visita e il modo migliore per iniziare un percorso
-              insieme.
-            </p>
+      <Section bg="charcoal">
+        <div className="text-center max-w-2xl mx-auto">
+          <p className="text-xs font-semibold tracking-[0.25em] text-primary-light uppercase mb-4">
+            Contattaci
+          </p>
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white leading-tight mb-5 text-balance">
+            Pronto a sorridere?
+          </h2>
+          <p className="text-white/60 mb-10 leading-relaxed max-w-xl mx-auto">
+            Il nostro team è disponibile per rispondere a tutte le tue domande e aiutarti a prenotare una visita senza impegno. Contattaci oggi stesso.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button
+              href="/contatti"
+              className="bg-white text-dark hover:bg-surface-alt shadow-lg hover:shadow-xl"
+            >
+              Contattaci ora
+              <ArrowRightIcon size={18} />
+            </Button>
+            <Button
+              href="/trattamenti"
+              variant="ghost"
+              className="text-white/70 hover:text-white hover:bg-white/10"
+            >
+              Scopri i servizi
+            </Button>
           </div>
-          <Button href="/contatti" className="shrink-0">
-            Prenota ora
-            <ArrowRightIcon size={18} />
-          </Button>
         </div>
       </Section>
     </>

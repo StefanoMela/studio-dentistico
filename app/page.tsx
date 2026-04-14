@@ -266,7 +266,7 @@ export default function HomePage() {
 
       {/* CTA */}
       <Section bg="charcoal">
-        <div className="text-center max-w-xl mx-auto">
+        <div className="text-center max-w-2xl mx-auto">
           <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-6">
             <ToothIcon size={32} className="text-primary-light" />
           </div>
@@ -276,17 +276,15 @@ export default function HomePage() {
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white leading-tight mb-5 text-balance">
             Prenota la tua visita di controllo
           </h2>
-          <p className="text-white/60 mb-8 leading-relaxed">
-            Una visita preventiva e il primo passo per un sorriso sano e
-            duraturo. Contattaci per fissare un appuntamento, siamo disponibili
-            dal lunedi al sabato.
+          <p className="text-white/60 mb-10 leading-relaxed max-w-xl mx-auto">
+            Una visita preventiva è il primo passo per un sorriso sano e duraturo. Contattaci per fissare un appuntamento, siamo disponibili dal lunedì al sabato.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               href="/contatti"
-              className="bg-white text-dark hover:bg-surface-alt shadow-lg"
+              className="bg-white text-dark hover:bg-surface-alt shadow-lg hover:shadow-xl"
             >
-              Contattaci ora
+              Prenota una visita
               <ArrowRightIcon size={18} />
             </Button>
             <Button

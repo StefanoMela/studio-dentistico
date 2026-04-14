@@ -267,24 +267,35 @@ export default function TrattamentiPage() {
 
       {/* CTA */}
       <Section bg="charcoal">
-        <div className="text-center max-w-lg mx-auto">
-          <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-6">
-            <ToothIcon size={28} className="text-primary-light" />
+        <div className="text-center max-w-2xl mx-auto">
+          <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-6">
+            <ToothIcon size={32} className="text-primary-light" />
           </div>
-          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-white mb-4 text-balance">
-            Hai domande su un trattamento?
-          </h2>
-          <p className="text-white/60 mb-8 text-sm leading-relaxed">
-            Contattaci per una consulenza iniziale. Ti aiuteremo a capire qual e
-            il percorso piu adatto alle tue esigenze.
+          <p className="text-xs font-semibold tracking-[0.25em] text-primary-light uppercase mb-4">
+            Scegli il tuo percorso
           </p>
-          <Button
-            href="/contatti"
-            className="bg-white text-dark hover:bg-surface-alt"
-          >
-            Contattaci
-            <ArrowRightIcon size={18} />
-          </Button>
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white leading-tight mb-5 text-balance">
+            Pronto per il trattamento ideale?
+          </h2>
+          <p className="text-white/60 mb-10 leading-relaxed max-w-xl mx-auto">
+            Contattaci per una consulenza iniziale. Ti aiuteremo a capire qual è il percorso più adatto alle tue esigenze.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button
+              href="/contatti"
+              className="bg-white text-dark hover:bg-surface-alt shadow-lg hover:shadow-xl"
+            >
+              Prenota una consulenza
+              <ArrowRightIcon size={18} />
+            </Button>
+            <Button
+              href="/chi-siamo"
+              variant="ghost"
+              className="text-white/70 hover:text-white hover:bg-white/10"
+            >
+              Conosci il team
+            </Button>
+          </div>
         </div>
       </Section>
     </>
