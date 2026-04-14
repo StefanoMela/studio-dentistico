@@ -202,7 +202,7 @@ export default function ContattiPage() {
               {/* Pin */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="flex flex-col items-center animate-float">
-                  <div className="w-6 h-6 rounded-full bg-primary border-3 border-white shadow-lg" />
+                  <div className="w-6 h-6 rounded-full bg-primary border-[3px] border-white shadow-lg" />
                   <div className="w-0.5 h-5 bg-primary" />
                 </div>
               </div>

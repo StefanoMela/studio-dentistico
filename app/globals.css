@@ -9,30 +9,31 @@
 @import "@fontsource/dm-sans/600.css";
 
 @theme {
-  /* Brand - Sophisticated dental palette */
-  --color-primary: #0d6e6e;
-  --color-primary-light: #14a3a3;
-  --color-primary-dark: #084848;
-  --color-secondary: #5a8f8f;
-  --color-accent: #c9a86c;
-  --color-accent-hover: #b8944f;
-  /* Accessible text-only shade of accent: 4.6:1 on white */
-  --color-accent-text: #7a5c1e;
+  /* Brand - Professional blue dental palette
+     Palette: #0C3A59, #1B5B88, #2187B6, #D5E9F2, #99C1D5, #009DC0 */
+  --color-primary: #1B5B88;
+  --color-primary-light: #2187B6;
+  --color-primary-dark: #0C3A59;
+  --color-secondary: #99C1D5;
+  --color-accent: #009DC0;
+  --color-accent-hover: #0086a3;
+  /* Accessible text-only shade of accent: 4.5:1 on white */
+  --color-accent-text: #006e85;
 
   /* Surfaces */
   --color-surface: #ffffff;
-  --color-surface-alt: #f8fafa;
-  --color-surface-warm: #faf9f7;
-  --color-border: #e2e8e8;
-  --color-border-hover: #c5d1d1;
+  --color-surface-alt: #D5E9F2;
+  --color-surface-warm: #e8f1f6;
+  --color-border: #99C1D5;
+  --color-border-hover: #6ea8c4;
 
   /* Text */
-  --color-dark: #1a2f2f;
-  --color-gray: #4a5f5f;
-  --color-muted: #7a9090;
+  --color-dark: #0C3A59;
+  --color-gray: #3d5a70;
+  --color-muted: #6a8fa8;
 
   /* State */
-  --color-success: #2d7d5a;
+  --color-success: #1a7a5c;
   --color-error: #c53d3d;
 
   /* Typography */
@@ -99,7 +100,7 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px -8px rgba(13, 110, 110, 0.15);
+  box-shadow: 0 12px 40px -8px rgba(27, 91, 136, 0.18);
 }
 
 /* Gradient text */

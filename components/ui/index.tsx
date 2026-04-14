@@ -16,21 +16,21 @@ interface ButtonProps {
 }
 
 const variantClasses: Record<ButtonVariant, string> = {
-  // white on primary-dark → 16.3:1 ✅
+  // white on #1B5B88 → 7.1:1, on #0C3A59 hover → 12:1 ✅
   primary:
     "bg-primary text-white hover:bg-primary-dark shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30",
-  // dark (#1a2f2f) on accent background → 4.6:1 ✅  |  hover darkens bg, contrast stays safe
+  // #0C3A59 on #009DC0 → 3.5:1 (large text ok) | hover darkens for better contrast
   secondary:
-    "bg-accent text-dark hover:bg-accent-hover hover:text-dark shadow-md shadow-accent/20",
-  // primary (#0d6e6e) on white → 10.0:1 ✅
+    "bg-accent text-dark hover:bg-accent-hover hover:text-white shadow-md shadow-accent/20",
+  // #1B5B88 on white → 7.1:1 ✅
   outline:
     "bg-transparent text-primary border-2 border-primary/30 hover:border-primary hover:bg-primary/5",
-  // gray (#4a5f5f) on light surfaces → 5.0:1 on white ✅  |  dark on hover ✅
+  // #3d5a70 on white → 6.3:1 ✅ | #0C3A59 on hover ✅
   ghost: "bg-transparent text-gray hover:text-dark hover:bg-surface-alt",
-  // For use on dark/charcoal backgrounds: white bg / dark text → 13.9:1 ✅
+  // white bg / #0C3A59 text → 12:1 ✅
   inverted:
     "bg-white text-dark hover:bg-surface-alt shadow-lg hover:shadow-xl",
-  // For use on dark/charcoal backgrounds: white/85 text → 8.4:1 ✅  |  hover white → 13.9:1 ✅
+  // white/85 on #0C3A59 bg → 10.2:1 ✅ | hover white → 12:1 ✅
   "ghost-inverted":
     "bg-transparent text-white/85 hover:text-white hover:bg-white/10",
 };
@@ -242,11 +242,11 @@ interface BadgeProps {
 }
 
 const badgeVariants: Record<"default" | "primary" | "accent", string> = {
-  // gray (#4a5f5f) on surface-alt (#f8fafa) → 4.8:1 ✅
+  // #3d5a70 on #D5E9F2 → 4.7:1 ✅
   default: "bg-surface-alt text-gray",
-  // primary (#0d6e6e) on primary/10 bg → 10.0:1 ✅
+  // #1B5B88 on primary/10 bg → 7.1:1 ✅
   primary: "bg-primary/10 text-primary",
-  // accent-text (#7a5c1e) on accent/10 bg (#fdf5e8) → 4.6:1 ✅
+  // #006e85 on accent/10 bg → 4.5:1 ✅
   accent: "bg-accent/10 text-accent-text",
 };
 
