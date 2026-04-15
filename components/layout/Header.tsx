@@ -29,13 +29,12 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-surface/95 backdrop-blur-lg shadow-sm border-b border-border/50"
           : "bg-surface"
-      }`}
+        }`}
     >
-      <div className="max-w-6xl mx-auto px-5 md:px-8">
+      <div className="mx-auto px-5 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link
@@ -67,11 +66,10 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-full ${
-                    isActive
+                  className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-full ${isActive
                       ? "text-primary bg-primary/5"
                       : "text-gray hover:text-dark hover:bg-surface-alt"
-                  }`}
+                    }`}
                   aria-current={isActive ? "page" : undefined}
                 >
                   {link.label}
@@ -136,11 +134,10 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
-                    isActive
+                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-colors ${isActive
                       ? "bg-primary/5 text-primary"
                       : "text-gray hover:bg-surface-alt hover:text-dark"
-                  }`}
+                    }`}
                   aria-current={isActive ? "page" : undefined}
                 >
                   {link.label}
