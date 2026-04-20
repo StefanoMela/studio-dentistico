@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Button,
   Section,
@@ -109,18 +110,18 @@ export default function HomePage() {
                   Studio Dentistico Sparano
                 </span>
               </div>
-              
+
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold text-dark leading-[1.1] mb-6 text-balance">
                 Il sorriso che hai sempre{" "}
                 <span className="gradient-text">desiderato</span>
               </h1>
-              
+
               <p className="text-gray text-base md:text-lg leading-relaxed mb-8 max-w-xl">
                 Ci prendiamo cura della tua salute orale con professionalita,
                 tecnologie avanzate e un approccio umano e personalizzato. Siamo
                 qui per te, ogni giorno.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/contatti" size="lg">
                   Prenota una visita
@@ -146,12 +147,15 @@ export default function HomePage() {
             <div className="relative hidden lg:block animate-fade-up delay-200">
               {/* Tilted background card for depth */}
               <div aria-hidden="true" className="absolute inset-4 rounded-3xl bg-gradient-to-br from-primary/10 to-accent/10 rotate-3 scale-95" />
+              {/*
               <PhotoPlaceholder
                 label="Foto hero – reception o sala d'attesa"
                 hint="Scatto luminoso dell'ingresso o dell'area di attesa dello studio, con luce naturale e atmosfera accogliente."
                 aspect="aspect-[4/5]"
                 className="relative shadow-2xl shadow-primary/10"
               />
+              */}
+              <Image src={"/dental-studio.jpg"} width={400} height={500} alt="accoglienza in studio" className="rounded-3xl" />
             </div>
           </div>
         </div>
@@ -186,22 +190,15 @@ export default function HomePage() {
           subtitle="Ogni spazio e stato progettato per metterti a tuo agio: dalla sala d'attesa alla poltrona, curi che ti senti al sicuro."
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <PhotoPlaceholder
-            label="Sala operatoria principale"
-            hint="Vista della poltrona operatoria con strumentazione digitale, illuminazione clinica e ambiente pulito e ordinato."
-            aspect="aspect-[3/2]"
-            className="sm:col-span-2 lg:col-span-1 lg:row-span-1"
-          />
-          <PhotoPlaceholder
-            label="Area di accoglienza / reception"
-            hint="Bancone della reception, arredi moderni, luce naturale. Trasmettere calore e professionalita al primo sguardo."
-            aspect="aspect-[3/2]"
-          />
-          <PhotoPlaceholder
-            label="Sala d'attesa"
-            hint="Poltroncine comode, riviste, verde decorativo. Atmosfera rilassante che riduce l'ansia del paziente."
-            aspect="aspect-[3/2]"
-          />
+          <div className="relative aspect-3/2 overflow-hidden rounded-xl sm:col-span-2 lg:col-span-1">
+            <Image src="/studio3.jpg" fill alt="Sala operatoria principale" className="object-cover" />
+          </div>
+          <div className="relative aspect-3/2 overflow-hidden rounded-xl">
+            <Image src="/studio1.png" fill alt="Area di accoglienza" className="object-cover" />
+          </div>
+          <div className="relative aspect-3/2 overflow-hidden rounded-xl">
+            <Image src="/studio2.jpg" fill alt="Sala d'attesa" className="object-cover" />
+          </div>
         </div>
       </Section>
 

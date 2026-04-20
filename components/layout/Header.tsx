@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ToothIcon } from "@/components/ui/icons";
 
@@ -30,8 +31,8 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-surface/95 backdrop-blur-lg shadow-sm border-b border-border/50"
-          : "bg-surface"
+        ? "bg-surface/95 backdrop-blur-lg shadow-sm border-b border-border/50"
+        : "bg-surface"
         }`}
     >
       <div className="mx-auto px-5 md:px-8">
@@ -43,7 +44,10 @@ export default function Header() {
             aria-label="Studio Dentistico Sparano - vai alla home"
           >
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+              {/*
               <ToothIcon className="text-primary" size={22} />
+              */}
+              <Image src={"/logo.png"} alt="logo" width={22} height={22} />
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-serif text-lg md:text-xl font-semibold text-dark tracking-tight group-hover:text-primary transition-colors">
@@ -67,8 +71,8 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-full ${isActive
-                      ? "text-primary bg-primary/5"
-                      : "text-gray hover:text-dark hover:bg-surface-alt"
+                    ? "text-primary bg-primary/5"
+                    : "text-gray hover:text-dark hover:bg-surface-alt"
                     }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -135,8 +139,8 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={`px-4 py-3 rounded-xl text-sm font-medium transition-colors ${isActive
-                      ? "bg-primary/5 text-primary"
-                      : "text-gray hover:bg-surface-alt hover:text-dark"
+                    ? "bg-primary/5 text-primary"
+                    : "text-gray hover:bg-surface-alt hover:text-dark"
                     }`}
                   aria-current={isActive ? "page" : undefined}
                 >
